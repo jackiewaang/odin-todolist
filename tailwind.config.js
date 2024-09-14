@@ -4,6 +4,9 @@ module.exports = {
   content: ['./src/**/*.{ts,tsx,html,js}'],
   theme: {
     extend: {},
+    fontFamily: {
+      'body': ['"Inter"'],
+    }
   },
   plugins: [],
 }
