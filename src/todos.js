@@ -1,21 +1,20 @@
-function createTodo(title, description, dueDate, priority){
-
-    const title = title;
-    const description = description;
-    const dueDate = dueDate;
-    let priority = priority;
+export const createTodo = (title, description, dueDate, priority) => {
+    const todoTitle = title;
+    const todoDescription = description;
+    const todoDate = dueDate;
+    let todoPriority = priority;
     let isCompleted = false;
 
-    const changePriority = () => priority + 1 % 3; // 0 for low, 1 for medium, 2 for high
-    const getPriority = () => priority;
+    const changePriority = () => todoPriority + 1 % 3; // 0 for low, 1 for medium, 2 for high
+    const getPriority = () => todoPriority;
     const toggleCompleted = () => (isCompleted) ? false : true;
 
-    return {title, description, dueDate, changePriority, getPriority, toggleCompleted};
+    return {todoTitle, todoDescription, todoDate, changePriority, getPriority, toggleCompleted};
 }
 
-function createProject(title, ...args){
-
-    const projectTitle = title;helloguys
+export const createProject = (title, ...args) => {
+    
+    const projectTitle = title;
     let todoArray = [];
     
     if(args.length > 0){
@@ -30,5 +29,5 @@ function createProject(title, ...args){
         }
     }
 
-    return {addTodo, removeTodo};
-}
+    return {projectTitle, todoArray, addTodo, removeTodo};
+} 
